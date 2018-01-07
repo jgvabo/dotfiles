@@ -42,6 +42,9 @@ Plug 'junegunn/fzf.vim'
 " Indent guides 
 Plug 'nathanaelkane/vim-indent-guides'
 
+" Startify
+Plug 'mhinz/vim-startify'
+
 " Initialize plugin system
 call plug#end()
 
