@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'vim-airline/vim-airline'
