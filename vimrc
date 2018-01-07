@@ -15,9 +15,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
+Plug 'tomasr/molokai'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
@@ -25,6 +27,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'scrooloose/syntastic'
 
 " Initialize plugin system
 call plug#end()
@@ -38,6 +43,7 @@ autocmd! User GoyoLeave Limelight!
 
 " <F12> Toggle line number display
 nnoremap <F12> :set nonumber!<cr>
+set nonumber!
 
 " <F11> Toggle NERDTree
 nnoremap <F11> :NERDTreeToggle<CR>
