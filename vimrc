@@ -13,36 +13,17 @@ endif
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Sensible vim package
 Plug 'tpope/vim-sensible'
-
-" Seoul256 and goyo colorschemes
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
-
-" Limelight focused writing
 Plug 'junegunn/limelight.vim'
-
-" Airline statusbar
 Plug 'vim-airline/vim-airline'
-
-" Nerdtree browser
 Plug 'scrooloose/nerdtree'
-
-" Tagbar
 Plug 'majutsushi/tagbar'
-
-"YouCompleteMe
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
-" Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-
-" Indent guides 
 Plug 'nathanaelkane/vim-indent-guides'
-
-" Startify
 Plug 'mhinz/vim-startify'
 
 " Initialize plugin system
@@ -63,6 +44,18 @@ nnoremap <F11> :NERDTreeToggle<CR>
 
 " Toggle Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" Various prefs
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" Python tabs
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
 
 " Super duper tab
 " ----------------------------------------------------------------------------
