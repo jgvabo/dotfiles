@@ -17,15 +17,11 @@ source ~/.prompt.sh
 #export TERM="xterm-color"
 set input-meta on
 set output-meta on
-#set convert-meta off
 export LESSCHARSET="latin1"
 export EDITOR="vim"
 export VISUAL="vim"
 export PAGER="less -r"
 unset  SDP_setup_done
-
-
-#function svndiff() { svn diff $@ | colordiff | more; }
 
 # Python 2.7
 # export PYTHON="2.7"
