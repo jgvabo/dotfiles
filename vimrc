@@ -1,6 +1,8 @@
 " jgv .vimrc
 " jgvabo@gmail.com
 "
+" s
+"
 " Load vim-plug if not present
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -37,7 +39,10 @@ Plug 'jgvabo/vim-e100'
 call plug#end()
 
 " Set colorscheme
-colorscheme seoul256
+set t_Co=256
+set background=dark
+colorscheme molokai
+let airline_theme="badwolf"
 
 " Autotoggle Limelight with Goyo
 autocmd! User GoyoEnter Limelight
