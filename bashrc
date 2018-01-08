@@ -21,20 +21,10 @@ set output-meta on
 export LESSCHARSET="latin1"
 export EDITOR="vim"
 export VISUAL="vim"
-export PATH="/private/jgv/bin:/bin:/global/distbin/:/global/bin/:$PATH"
 export PAGER="less -r"
 unset  SDP_setup_done
 
-# local libs for e.g. tmux
-export LD_LIBRARY_PATH="/private/jgv/opt/lib:$LD_LIBRARY_PATH"
 
-# eclrun config
-export SLBSLS_LICENSE_FILE=7321@eclipse-lic-no.statoil.no
-export ECLPATH=/prog/ecl/grid
-source /prog/ecl/grid/macros/@eclrunsetup.sh
-export PATH="/prog/ecl/grid/macros:/prog/ecl/grid/tools/linux_x86_64/eclpython/bin:$PATH"
-
-source /project/res/SDP_bashrc
 #function svndiff() { svn diff $@ | colordiff | more; }
 
 # Python 2.7
@@ -43,3 +33,6 @@ source /project/res/SDP_bashrc
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# If at work
+[ -f ~/.bash_work] && source ~/.bash_work 
