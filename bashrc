@@ -3,7 +3,6 @@ alias ls='ls --color=auto --show-control-chars -F'
 alias ll="ls -l -F"
 alias vi=vim
 alias ..="cd .."
-alias cls="clear"
 alias matlab="matlab -nodesktop -nosplash"
 alias x11small="xrandr --size 800x600"
 alias x11win="xrandr --size 1024x768"
