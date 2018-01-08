@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
+Plug 'jnurmine/Zenburn'
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/goyo.vim'
@@ -40,9 +41,8 @@ call plug#end()
 
 " Set colorscheme
 set t_Co=256
-set background=dark
-colorscheme molokai
-let airline_theme="badwolf"
+colorscheme zenburn 
+" let airline_theme="badwolf"
 
 " Autotoggle Limelight with Goyo
 autocmd! User GoyoEnter Limelight
