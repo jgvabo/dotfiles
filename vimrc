@@ -31,6 +31,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
+Plug 'jgvabo/vim-e100'
 
 " Initialize plugin system
 call plug#end()
@@ -63,6 +64,11 @@ set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
+
+" Enable e100 highlighting
+au BufNewFile,BufRead *.DATA,*.SCH,*.INC,*.sch setf eclipse
+au BufNewFile,BufRead *.PRT,*.LOG		setf eclipse_prt
+au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 
 " Super duper tab
 " ----------------------------------------------------------------------------
