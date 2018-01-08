@@ -1,5 +1,5 @@
 " jgv .vimrc
-" jgvabo@gmail.com / jgv@statoil.com
+" jgvabo@gmail.com
 "
 " Load vim-plug if not present
 if empty(glob('~/.vim/autoload/plug.vim'))
