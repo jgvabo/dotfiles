@@ -37,13 +37,13 @@ NOTHING="\[\033[0m\]"
 ##################
 # Default Colors #
 ##################
-C_USER="$DARK_GRAY"
+C_USER="$ORANGE"
 C_OP_PAREN="$LIGHT_GRAY"
 C_AMP="$LIGHT_GRAY"
 C_HOST="$DARK_GRAY"
 C_CL_PAREN="$BLACK"
 C_COLON="$DARK_GRAY"
-C_PWD="$LIGHT_BLUE"
+C_PWD="$ORANGE"
 C_GT="$DARK_GRAY"
 
 ##########################
