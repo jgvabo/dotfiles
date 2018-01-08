@@ -35,4 +35,4 @@ unset  SDP_setup_done
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # If at work
-[ -f ~/.bash_work] && source ~/.bash_work 
+[ -f ~/.bash_work ] && source ~/.bash_work 
