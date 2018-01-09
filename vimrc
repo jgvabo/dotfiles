@@ -41,7 +41,7 @@ call plug#end()
 
 " Set colorscheme
 set t_Co=256
-colorscheme seoul256
+colorscheme github
 " let airline_theme="badwolf"
 
 " Autotoggle Limelight with Goyo
