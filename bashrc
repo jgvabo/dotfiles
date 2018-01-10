@@ -1,7 +1,17 @@
+# Platform (e.g. Darwin is macOs)
+export PLATFORM=$(uname -s)
+
+# Colored ls
+if [ -x /usr/bin/dircolors ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+elif [ "$PLATFORM" = Darwin ]; then
+    alias ls='ls -G'
+fi
+
 # Aliases
-alias ls='ls --color=auto --show-control-chars -F'
 alias ll="ls -l -F"
-alias vi=vim
 alias ..="cd .."
 alias matlab="matlab -nodesktop -nosplash"
 alias x11small="xrandr --size 800x600"
