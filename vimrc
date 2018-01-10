@@ -35,6 +35,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
 Plug 'jgvabo/vim-e100'
+Plug 'cosminadrianpopescu/vim-tail'
 
 " Initialize plugin system
 call plug#end()
