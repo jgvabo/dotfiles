@@ -15,7 +15,7 @@ if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
     # Git prompt
     GIT_PROMPT_ONLY_IN_REPO=0
     GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh # uncomment to support Git older than 1.7.10
-    GIT_PROMPT_THEME=Solarized_UserHost # use theme optimized for solarized color scheme
+    GIT_PROMPT_THEME=Single_line_Solarized # use theme optimized for solarized color scheme
     source ~/.bash-git-prompt/gitprompt.sh
 else
     # User@host
