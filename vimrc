@@ -42,7 +42,7 @@ call plug#end()
 
 " Set colorscheme
 set t_Co=256
-"colorscheme github
+colorscheme seoul256
 
 " Autotoggle Limelight with Goyo
 autocmd! User GoyoEnter Limelight
@@ -74,6 +74,9 @@ set expandtab
 au BufNewFile,BufRead *.DATA,*.SCH,*.INC,*.sch setf eclipse
 au BufNewFile,BufRead *.PRT,*.LOG		setf eclipse_prt
 au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
+
+" Start YouCompleteMe with only one char
+let g:ycm_min_num_of_chars_for_completion = 1
 
 " Super duper tab
 " ----------------------------------------------------------------------------
