@@ -33,6 +33,7 @@ Plug 'scrooloose/syntastic'
 Plug 'jgvabo/vim-e100'
 Plug 'cosminadrianpopescu/vim-tail'
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()
@@ -74,6 +75,12 @@ au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 
 " Start YouCompleteMe with only one char
 let g:ycm_min_num_of_chars_for_completion = 1
+
+" UltiSnips triggering
+ let g:UltiSnipsExpandTrigger = '<C-j>'
+ let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+ let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
 
 " Super duper tab
 " ----------------------------------------------------------------------------
