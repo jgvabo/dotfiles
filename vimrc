@@ -17,13 +17,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
-Plug 'jnurmine/Zenburn'
-Plug 'tomasr/molokai'
-Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
@@ -36,6 +32,7 @@ Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
 Plug 'jgvabo/vim-e100'
 Plug 'cosminadrianpopescu/vim-tail'
+Plug 'SirVer/ultisnips'
 
 " Initialize plugin system
 call plug#end()
