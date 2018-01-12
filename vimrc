@@ -1,8 +1,6 @@
 " jgv .vimrc
 " jgvabo@gmail.com
 "
-" s
-"
 " Load vim-plug if not present
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -56,6 +54,9 @@ nnoremap <F11> :NERDTreeToggle<CR>
 "
 " <F10> Toggle FZF
 nnoremap <F10> :FZF<CR>
+
+" <F9> Toggle Goyo
+nnoremap <F9> :Goyo<CR>
 
 " Toggle Tagbar
 nmap <F8> :TagbarToggle<CR>
