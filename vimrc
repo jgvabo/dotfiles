@@ -62,10 +62,12 @@ nnoremap <F9> :Goyo<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Various prefs
+set nocompatible
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set path+=**
 
 " Python tabs
 set tabstop=4
