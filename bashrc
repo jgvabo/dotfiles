@@ -40,14 +40,9 @@ export LESSCHARSET="latin1"
 export EDITOR="vim"
 export VISUAL="vim"
 export PAGER="less -r"
-unset  SDP_setup_done
 
 # ignore case for autocompletion
 bind 'set completion-ignore-case on'
-
-# Python 2.7
-# export PYTHON="2.7"
-# source /prog/sdpsoft/environment.sh
 
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
