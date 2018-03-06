@@ -50,7 +50,7 @@ nnoremap <F12> :set nonumber!<cr>
 set nonumber!
 
 " <F11> Toggle NERDTree
-nnoremap <F11> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
 "
 " <F10> Toggle FZF
 nnoremap <F10> :FZF<CR>
