@@ -33,6 +33,7 @@ Plug 'cosminadrianpopescu/vim-tail'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
+Plug 'tmhedberg/SimpylFold'
 
 " Initialize plugin system
 call plug#end()
@@ -68,6 +69,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set path+=**
+set foldmethod=indent
 
 " Python tabs
 set tabstop=4
@@ -84,9 +86,11 @@ au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 let g:ycm_min_num_of_chars_for_completion = 1
 
 " UltiSnips triggering
- let g:UltiSnipsExpandTrigger = '<C-j>'
- let g:UltiSnipsJumpForwardTrigger = '<C-j>'
- let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
+
 
 " FZF colors
 let g:fzf_colors =
