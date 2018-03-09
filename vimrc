@@ -63,6 +63,9 @@ nnoremap <F9> :Goyo<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Various prefs
+let mapleader      = ' '
+let maplocalleader = ' '
+set encoding=utf-8
 set nocompatible
 set incsearch
 set hlsearch
@@ -71,11 +74,24 @@ set smartcase
 set path+=**
 set foldmethod=indent
 
-" Python tabs
+" Python settings 
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
+let python_highlight_all=1
+
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+
 
 " Enable e100 highlighting
 au BufNewFile,BufRead *.DATA,*.SCH,*.INC,*.sch setf eclipse
@@ -84,6 +100,7 @@ au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 
 " Start YouCompleteMe with only one char
 let g:ycm_min_num_of_chars_for_completion = 1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " UltiSnips triggering
 let g:UltiSnipsExpandTrigger = '<C-j>'
