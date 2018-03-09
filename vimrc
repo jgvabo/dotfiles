@@ -42,29 +42,31 @@ call plug#end()
 set t_Co=256
 colorscheme seoul256
 
+" Leader
+let mapleader      = ' '
+let maplocalleader = ' '
+
 " Autotoggle Limelight with Goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 " <F12> Toggle line number display
-nnoremap <F12> :set nonumber!<cr>
+nnoremap <leader>n :set nonumber!<cr>
 set nonumber!
 
 " <F11> Toggle NERDTree
-nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 "
 " <F10> Toggle FZF
-nnoremap <F10> :FZF<CR>
+nnoremap <leader>f :FZF<CR>
 
 " <F9> Toggle Goyo
-nnoremap <F9> :Goyo<CR>
+nnoremap <leader>g :Goyo<CR>
 
 " Toggle Tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>b :TagbarToggle<CR>
 
 " Various prefs
-let mapleader      = ' '
-let maplocalleader = ' '
 set encoding=utf-8
 set nocompatible
 set incsearch
@@ -111,7 +113,7 @@ au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 
 " Start YouCompleteMe with only one char
 let g:ycm_min_num_of_chars_for_completion = 1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>s  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " UltiSnips triggering
 let g:UltiSnipsExpandTrigger = '<C-j>'
