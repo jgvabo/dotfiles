@@ -29,7 +29,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
-Plug 'jgvabo/vim-e100'
+Plug 'git@github.com:Statoil/vim-e100.git'
 Plug 'cosminadrianpopescu/vim-tail'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -75,7 +75,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set path+=**
-set foldmethod=indent
+"set foldmethod=indent
 
 " Python settings 
 set tabstop=4
@@ -93,7 +93,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 4
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 
