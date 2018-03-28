@@ -14,6 +14,7 @@ fi
 alias ll="ls -l -F"
 alias ..="cd .."
 alias matlab="matlab -nodesktop -nosplash"
+alias x11macbook="xrandr --size 1280x720"
 alias x11small="xrandr --size 800x600"
 alias x11win="xrandr --size 1024x768"
 alias x11one="xrandr --size 1920x1080"
