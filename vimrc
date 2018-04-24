@@ -35,6 +35,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'tmhedberg/SimpylFold'
+Plug 'Konfekt/FastFold'
 
 " Initialize plugin system
 call plug#end()
@@ -75,8 +76,7 @@ set hlsearch
 set ignorecase
 set smartcase
 set path+=**
-"set foldmethod=indent
-
+set foldlevel=20
 " Python settings 
 set tabstop=4
 set softtabstop=0
@@ -139,3 +139,7 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+" SimplyFold setings
+let g:SimpylFold_docstring_preview = 1
+
