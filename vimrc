@@ -36,6 +36,7 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Konfekt/FastFold'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Initialize plugin system
 call plug#end()
@@ -143,5 +144,9 @@ let g:fzf_colors =
 " SimplyFold setings
 let g:SimpylFold_docstring_preview = 1
 
+" Highlight line number
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
+
+" Markdown
+let vim_markdown_preview_github=1
