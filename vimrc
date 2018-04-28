@@ -143,3 +143,5 @@ let g:fzf_colors =
 " SimplyFold setings
 let g:SimpylFold_docstring_preview = 1
 
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
