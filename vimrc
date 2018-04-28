@@ -36,7 +36,20 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Konfekt/FastFold'
-Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'gabrielelana/vim-markdown'
+"
+" Markdown composer
+function! BuildComposer(info)
+    if a:info.status != 'unchanged' || a:info.force
+        if has('nvim')
+            !cargo build --release
+        else
+            !cargo build --release --no-default-features --features json-rpc
+        endif
+    endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 " Initialize plugin system
 call plug#end()
@@ -148,5 +161,3 @@ let g:SimpylFold_docstring_preview = 1
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
 
-" Markdown
-let vim_markdown_preview_github=1
