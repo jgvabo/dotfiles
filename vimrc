@@ -14,6 +14,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -38,7 +39,7 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Konfekt/FastFold'
 Plug 'gabrielelana/vim-markdown'
 "
-" Markdown composer
+" Markdown composer building
 function! BuildComposer(info)
     if a:info.status != 'unchanged' || a:info.force
         if has('nvim')
