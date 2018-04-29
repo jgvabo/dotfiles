@@ -15,6 +15,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'tomasr/molokai'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -68,8 +70,8 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 " <F12> Toggle line number display
-nnoremap <leader>n :set nonumber!<cr>
-set nonumber!
+nnoremap <leader>n :set nonumber! norelativenumber!<cr>
+set nonumber! norelativenumber!
 
 " <F11> Toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
