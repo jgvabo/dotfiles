@@ -60,6 +60,7 @@ call plug#end()
 " Set colorscheme
 set t_Co=256
 colorscheme Tomorrow-Night
+let g:airline_theme='dark'
 
 " Leader
 let mapleader      = ' '
@@ -114,7 +115,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 
-"python with virtualenv support
+" python with virtualenv support
 py << EOF
 import os
 import sys
