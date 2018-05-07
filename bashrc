@@ -10,6 +10,9 @@ elif [ "$PLATFORM" = Darwin ]; then
     alias ls='ls -G'
 fi
 
+# Path
+export PATH="~/bin/:$PATH"
+
 # Aliases
 alias ll="ls -l -F"
 alias ..="cd .."
