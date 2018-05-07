@@ -60,6 +60,7 @@ call plug#end()
 " Set colorscheme
 set t_Co=256
 colorscheme Tomorrow-Night
+let g:airline_powerline_fonts = 1
 let g:airline_theme='dark'
 
 " Leader
