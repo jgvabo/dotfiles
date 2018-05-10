@@ -76,6 +76,9 @@ nnoremap <leader>g :Goyo<CR>
 " Toggle Tagbar
 nmap <leader>b :TagbarToggle<CR>
 
+" Toggle Markdown preview
+nmap <leader>m :MarkdownPreview<CR>
+
 " Various prefs
 set encoding=utf-8
 set nocompatible
