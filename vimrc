@@ -20,6 +20,7 @@ Plug 'tomasr/molokai'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
@@ -42,6 +43,7 @@ Plug 'Konfekt/FastFold'
 Plug 'gabrielelana/vim-markdown'
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
+Plug 'bling/vim-bufferline'
 
 " Initialize plugin system
 call plug#end()
@@ -60,17 +62,17 @@ let maplocalleader = ' '
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-" <F12> Toggle line number display
-nnoremap <leader>n :set nonumber! norelativenumber!<cr>
+" Toggle line number display
+nnoremap <leader>l :set nonumber! norelativenumber!<cr>
 set nonumber! norelativenumber!
 
-" <F11> Toggle NERDTree
+" Toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
 "
-" <F10> Toggle FZF
+" Toggle FZF
 nnoremap <leader>f :FZF<CR>
 
-" <F9> Toggle Goyo
+" Toggle Goyo
 nnoremap <leader>g :Goyo<CR>
 
 " Toggle Tagbar
@@ -78,6 +80,10 @@ nmap <leader>b :TagbarToggle<CR>
 
 " Toggle Markdown preview
 nmap <leader>m :MarkdownPreview<CR>
+
+" Buffer movement
+nmap <leader>n :bnext<CR>
+nmap <leader>p :bprev<CR>
 
 " Various prefs
 set encoding=utf-8
