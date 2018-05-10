@@ -14,6 +14,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'tomasr/molokai'
@@ -33,7 +34,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/syntastic'
-Plug 'https://git@github.com/Statoil/vim-e100.git'
+Plug 'Statoil/vim-e100'
 Plug 'cosminadrianpopescu/vim-tail'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
