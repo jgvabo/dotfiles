@@ -44,7 +44,6 @@ Plug 'Konfekt/FastFold'
 Plug 'gabrielelana/vim-markdown'
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
-Plug 'bling/vim-bufferline'
 
 " Initialize plugin system
 call plug#end()
@@ -67,6 +66,7 @@ autocmd! User GoyoLeave Limelight!
 nnoremap <leader>l :set nonumber! norelativenumber!<cr>
 set nonumber! norelativenumber!
 
+
 " Toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
 "
@@ -85,6 +85,7 @@ nmap <leader>m :MarkdownPreview<CR>
 " Buffer movement
 nmap <leader>n :bnext<CR>
 nmap <leader>p :bprev<CR>
+nmap <leader>c :pclose<CR>
 
 " Various prefs
 set encoding=utf-8
@@ -134,6 +135,7 @@ au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 " Start YouCompleteMe with only one char
 let g:ycm_min_num_of_chars_for_completion = 1
 map <leader>s  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>d  :YcmCompleter GetDoc<CR>
 
 " UltiSnips triggering
 let g:UltiSnipsExpandTrigger = '<C-j>'
