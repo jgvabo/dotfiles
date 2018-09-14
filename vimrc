@@ -86,6 +86,9 @@ nmap <leader>n :bnext<CR>
 nmap <leader>p :bprev<CR>
 nmap <leader>c :pclose<CR>
 
+" Avoid indent when pasting
+nmap <leader>p :set invpaste<CR>
+
 " Various prefs
 set encoding=utf-8
 set nocompatible
