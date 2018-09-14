@@ -78,16 +78,13 @@ nnoremap <leader>g :Goyo<CR>
 " Toggle Tagbar
 nmap <leader>b :TagbarToggle<CR>
 
-" Toggle Markdown preview
-nmap <leader>m :MarkdownPreview<CR>
-
 " Buffer movement
 nmap <leader>n :bnext<CR>
 nmap <leader>p :bprev<CR>
 nmap <leader>c :pclose<CR>
 
 " Avoid indent when pasting
-nmap <leader>p :set invpaste<CR>
+nmap <leader>v :set invpaste<CR>
 
 " Various prefs
 set encoding=utf-8
