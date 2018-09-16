@@ -1,10 +1,13 @@
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = auto
-  pager = true
+	diff = always
+	status = always
+	branch = always
+	interactive = always
+	ui = always
+	pager = true
+	grep = always
+	decorate = always
+	showbranch = always
 
 [credential]
 	helper = cache
