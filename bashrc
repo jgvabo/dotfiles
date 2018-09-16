@@ -5,10 +5,12 @@ export PLATFORM=$(uname -s)
 if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
     alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
 elif [ "$PLATFORM" = Darwin ]; then
     alias ls='ls -G'
 fi
+
+# Colored grep
+alias grep='grep --color=auto'
 
 # Path
 export PATH="~/bin/:$PATH"
@@ -44,6 +46,15 @@ export LESSCHARSET="latin1"
 export EDITOR="vim"
 export VISUAL="vim"
 export PAGER="less -r"
+
+# Colored less and man pages
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;33m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m' 
+export LESS_TERMCAP_so=$'\E[01;42;30m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
 
 # ignore case for autocompletion
 bind 'set completion-ignore-case on'
