@@ -62,5 +62,14 @@ bind 'set completion-ignore-case on'
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# Find dir
+# fd - cd to selected directory
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
 # If at work
 [ -f ~/.bash_work ] && source ~/.bash_work 
