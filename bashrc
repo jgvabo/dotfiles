@@ -25,6 +25,7 @@ alias x11win="xrandr --size 1024x768"
 alias x11one="xrandr --size 1920x1080"
 alias x11two="xrandr --size 3840x1080"
 alias tmux="TERM=screen-256color-bce tmux"
+alias vf="vim $(fzf)"
 
 # Prompt
 if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
