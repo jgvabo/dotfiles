@@ -25,6 +25,15 @@ alias x11win="xrandr --size 1024x768"
 alias x11one="xrandr --size 1920x1080"
 alias x11two="xrandr --size 3840x1080"
 alias tmux="TERM=screen-256color-bce tmux"
+# Fix for redhat 7
+if [ "$PLATFORM" = Linux ]; then
+    # TODO - Improve
+    # This assumes that we're always on RH if we're on Linux
+    majversion=$(lsb_release -rs | cut -f1 -d.)
+    if [ "$majversion" = 7 ]; then
+        unalias tmux
+    fi
+fi
 alias fzp="fzf --preview=\"head -\$LINES {}\""
 alias fzv="vim \$(fzp)"
 
