@@ -10,7 +10,7 @@
 	showbranch = always
 
 [credential]
-	helper = cache
+	helper = store --file ~/.gitcred
 [alias]
     aa = add --all
     bv = branch -vv
