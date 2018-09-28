@@ -73,7 +73,7 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>f :FZF<CR>
 
 " Toggle Goyo
-nnoremap <leader>g :Goyo<CR>
+nnoremap <leader>y :Goyo<CR>
 
 " Toggle Tagbar
 nmap <leader>b :TagbarToggle<CR>
@@ -83,8 +83,18 @@ nmap <leader>n :bnext<CR>
 nmap <leader>p :bprev<CR>
 nmap <leader>c :pclose<CR>
 
+" Fast replace
+nmap <leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
+
 " Avoid indent when pasting
 nmap <leader>v :set invpaste<CR>
+
+" YouCompleteMe
+map <leader>d  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>g  :YcmCompleter GetDoc<CR>
+
+" Signify diff
+map <leader>i :SignifyToggleHighlight<CR>
 
 " Various prefs
 set encoding=utf-8
@@ -119,7 +129,6 @@ augroup CloseLoclistWindowGroup
 augroup END
 
 " Signify
-map <leader>d :SignifyToggleHighlight<CR>
 
 " Enable e100 highlighting
 au BufNewFile,BufRead *.DATA,*.SCH,*.INC,*.sch setf eclipse
@@ -128,8 +137,6 @@ au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 
 " Start YouCompleteMe with only one char
 let g:ycm_min_num_of_chars_for_completion = 1
-map <leader>s  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-map <leader>r  :YcmCompleter GetDoc<CR>
 
 " UltiSnips triggering
 let g:UltiSnipsExpandTrigger = '<C-j>'
