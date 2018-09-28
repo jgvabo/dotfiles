@@ -33,9 +33,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'Statoil/vim-e100'
-Plug 'cosminadrianpopescu/vim-tail'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
@@ -43,6 +42,7 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Konfekt/FastFold'
 Plug 'gabrielelana/vim-markdown'
 Plug 'plytophogy/vim-virtualenv'
+Plug 'tinco/haskell.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -102,18 +102,24 @@ set shiftwidth=4
 set expandtab
 let python_highlight_all=1
 
-" Syntastic
-let g:syntastic_python_checkers = ['pylint']
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Ale
+let g:ale_open_list = 1
+let g:ale_list_window_size = 5
+let g:airline#extensions#ale#enabled = 1
+let g:ale_set_highlights = 0
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '-'
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 4
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+augroup CloseLoclistWindowGroup
+    autocmd!
+    autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
 
+" Signify
+map <leader>d :SignifyToggleHighlight<CR>
 
 " Enable e100 highlighting
 au BufNewFile,BufRead *.DATA,*.SCH,*.INC,*.sch setf eclipse
@@ -123,7 +129,7 @@ au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 " Start YouCompleteMe with only one char
 let g:ycm_min_num_of_chars_for_completion = 1
 map <leader>s  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-map <leader>d  :YcmCompleter GetDoc<CR>
+map <leader>r  :YcmCompleter GetDoc<CR>
 
 " UltiSnips triggering
 let g:UltiSnipsExpandTrigger = '<C-j>'
