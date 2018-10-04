@@ -40,7 +40,8 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Konfekt/FastFold'
-Plug 'gabrielelana/vim-markdown'
+"This is super-slow
+"Plug 'gabrielelana/vim-markdown'
 Plug 'plytophogy/vim-virtualenv'
 Plug 'tinco/haskell.vim'
 
