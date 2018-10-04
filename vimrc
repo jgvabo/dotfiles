@@ -90,8 +90,8 @@ nmap <leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
 nmap <leader>v :set invpaste<CR>
 
 " YouCompleteMe
-map <leader>d  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-map <leader>g  :YcmCompleter GetDoc<CR>
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>d  :YcmCompleter GetDoc<CR>
 
 " Signify diff
 map <leader>i :SignifyToggleHighlight<CR>
