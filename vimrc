@@ -13,37 +13,57 @@ endif
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
+" Themes
 Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'tomasr/molokai'
-Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+" Sensible defaults
+Plug 'tpope/vim-sensible'
+" Surront words with ",', <tag> etc.
+Plug 'tpope/vim-surround'
+" Quickly comment out lines
+Plug 'tpope/vim-commentary'
+" Distraction free writing
+Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
+Plug 'junegunn/limelight.vim', {'on': 'Goyo'}
+" Peek at buffers with @ and <ctrl>+r
 Plug 'junegunn/vim-peekaboo'
+" Statusline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-Plug 'majutsushi/tagbar'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py' }
+" File explorer - <leader>+t
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+" Tag browser - <leader>+b
+Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
+" Semantic completion & snippets
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py', 'for': 'python' }
+Plug 'SirVer/ultisnips', {'for': 'python' }
+Plug 'honza/vim-snippets', {'for': 'python' }
+" Fuzzy file finder - <leader>+f
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+" Start with MRUs
 Plug 'mhinz/vim-startify'
+" Git integration
 Plug 'tpope/vim-fugitive'
+" Highlight changes in the gutter
 Plug 'mhinz/vim-signify'
+" Async linter
 Plug 'w0rp/ale'
+" Schlumberger Eclipse syntax
 Plug 'Statoil/vim-e100'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Better tab completion
 Plug 'ervandew/supertab'
-Plug 'tmhedberg/SimpylFold'
+" Faster folding
 Plug 'Konfekt/FastFold'
-"This is super-slow
-"Plug 'gabrielelana/vim-markdown'
+" Better folding for python
+Plug 'tmhedberg/SimpylFold'
+" Python virtualenv
 Plug 'plytophogy/vim-virtualenv'
-Plug 'tinco/haskell.vim'
+" Indent guides
+" Plug 'nathanaelkane/vim-indent-guides'
+" For working with csv files
+Plug 'chrisbra/csv.vim'
+" Haskell
+" Plug 'tinco/haskell.vim'
 
 " Initialize plugin system
 call plug#end()
