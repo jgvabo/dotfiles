@@ -62,8 +62,8 @@ Plug 'plytophogy/vim-virtualenv'
 " Plug 'nathanaelkane/vim-indent-guides'
 " For working with csv files
 Plug 'chrisbra/csv.vim'
-" Auto close brackets
-Plug 'jiangmiao/auto-pairs'
+" Auto close brackets - use surround
+" Plug 'jiangmiao/auto-pairs'
 " Haskell
 " Plug 'tinco/haskell.vim'
 
