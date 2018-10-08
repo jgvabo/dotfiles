@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 
 " Themes
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'altercation/vim-colors-solarized'
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 " Surront words with ",', <tag> etc.
@@ -45,7 +46,8 @@ Plug 'mhinz/vim-startify'
 " Git integration
 Plug 'tpope/vim-fugitive'
 " Highlight changes in the gutter
-Plug 'mhinz/vim-signify'
+" Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 " Async linter
 Plug 'w0rp/ale'
 " Schlumberger Eclipse syntax
@@ -72,9 +74,10 @@ call plug#end()
 
 " Set colorscheme
 set t_Co=256
-colorscheme Tomorrow-Night
+set background=dark
+colorscheme solarized
 let g:airline_powerline_fonts = 1
-let g:airline_theme='dark'
+let g:airline_theme='solarized'
 
 " Leader
 let mapleader      = ' '
@@ -150,8 +153,6 @@ augroup CloseLoclistWindowGroup
     autocmd!
     autocmd QuitPre * if empty(&buftype) | lclose | endif
 augroup END
-
-" Signify
 
 " Enable e100 highlighting
 au BufNewFile,BufRead *.DATA,*.SCH,*.INC,*.sch setf eclipse
