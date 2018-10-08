@@ -44,9 +44,6 @@ if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
     GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh # uncomment to support Git older than 1.7.10
     GIT_PROMPT_THEME=Single_line_Solarized # use theme optimized for solarized color scheme
     source ~/.bash-git-prompt/gitprompt.sh
-else
-    # User@host
-    source ~/.prompt.sh
 fi
 
 
