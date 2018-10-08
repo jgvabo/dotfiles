@@ -46,7 +46,6 @@ Plug 'mhinz/vim-startify'
 " Git integration
 Plug 'tpope/vim-fugitive'
 " Highlight changes in the gutter
-" Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
 " Async linter
 Plug 'w0rp/ale'
@@ -119,8 +118,8 @@ nmap <leader>v :set invpaste<CR>
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>d  :YcmCompleter GetDoc<CR>
 
-" Signify diff
-map <leader>i :SignifyToggleHighlight<CR>
+" Highlight diffs
+map <leader>i :GitGutterLineHighlightsToggle<CR>
 
 " Various prefs
 set encoding=utf-8
