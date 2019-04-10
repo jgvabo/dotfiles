@@ -74,9 +74,9 @@ call plug#end()
 " Set colorscheme
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme solarized
 let g:airline_powerline_fonts = 1
-let g:airline_theme='tomorrow'
+let g:airline_theme='solarized'
 
 " Leader
 let mapleader      = ' '
