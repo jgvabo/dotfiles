@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 " Surront words with ",', <tag> etc.
@@ -73,10 +74,12 @@ call plug#end()
 
 " Set colorscheme
 set t_Co=256
-set background=dark
-colorscheme solarized
+let g:rehash256 = 1
+
+" set background=dark
+colorscheme molokai 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='dark'
 
 " Leader
 let mapleader      = ' '
@@ -191,3 +194,5 @@ let g:SimpylFold_docstring_preview = 1
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
 
+" Gui font
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
