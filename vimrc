@@ -35,10 +35,7 @@ Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'ryanoasis/vim-devicons'
 " Tag browser - <leader>+b
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
-" Semantic completion & snippets
-" Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py', 'for': 'python' }
-" Plug 'SirVer/ultisnips', {'for': 'python' }
-" Plug 'honza/vim-snippets', {'for': 'python' }
+" Autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Fuzzy file finder - <leader>+z
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -53,12 +50,7 @@ Plug 'Statoil/vim-e100'
 Plug 'Konfekt/FastFold'
 " Better folding for python
 Plug 'tmhedberg/SimpylFold'
-" Python virtualenv
-"Plug 'plytophogy/vim-virtualenv'
-" Indent guides
-" Plug 'nathanaelkane/vim-indent-guides'
 " For working with csv files
-" Plug 'chrisbra/csv.vim'
 Plug 'mechatroner/rainbow_csv'
 " Auto close brackets
 " Plug 'jiangmiao/auto-pairs'
@@ -73,7 +65,7 @@ let g:rehash256 = 1
 " set background=dark
 colorscheme molokai 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='dark'
+let g:airline_theme='molokai'
 
 " Leader
 let mapleader      = ' '
@@ -289,8 +281,8 @@ omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
 " Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <C-d> <Plug>(coc-range-select)
-xmap <silent> <C-d> <Plug>(coc-range-select)
+" nmap <silent> <C-d> <Plug>(coc-range-select)
+" xmap <silent> <C-d> <Plug>(coc-range-select)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
