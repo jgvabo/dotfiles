@@ -3,9 +3,9 @@
 "
 "" Load vim-plug if not present
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Specify a directory for plugins
@@ -13,8 +13,12 @@ endif
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Themes
+" Colorscheme
 Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'mhartington/oceanic-next'
+Plug 'rakr/vim-one'
+Plug 'junegunn/seoul256.vim'
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 " Surrond words with ",', <tag> etc.
@@ -40,20 +44,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Fuzzy file finder - <leader>+z
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" Silver searcher
+Plug 'mileszs/ack.vim'
 " Git integration
 Plug 'tpope/vim-fugitive'
 " Highlight changes in the gutter
 Plug 'airblade/vim-gitgutter'
 " Schlumberger Eclipse syntax
 Plug 'Statoil/vim-e100'
-" Faster folding
-Plug 'Konfekt/FastFold'
-" Better folding for python
-Plug 'tmhedberg/SimpylFold'
 " For working with csv files
 Plug 'mechatroner/rainbow_csv'
-" Auto close brackets
-" Plug 'jiangmiao/auto-pairs'
+" Color brackets
+Plug 'frazrepo/vim-rainbow'
 
 " Initialize plugin system
 call plug#end()
@@ -62,8 +64,13 @@ call plug#end()
 set t_Co=256
 let g:rehash256 = 1
 
-" set background=dark
+set background=dark
 colorscheme molokai 
+
+" Fix for gitgutter
+highlight! link SignColumn LineNr
+
+" Airline config
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
 
@@ -86,6 +93,15 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 " Toggle FZF
 nnoremap <leader>z :FZF<CR>
 
+" Ack / Silver searcher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+cnoreabbrev Ack Ack!
+nnoremap <leader>w :Ack!<Space>
+
+
 " Toggle Goyo
 nnoremap <leader>y :Goyo<CR>
 
@@ -105,6 +121,9 @@ nmap <leader>v :set invpaste<CR>
 
 " Highlight diffs
 map <leader>i :GitGutterLineHighlightsToggle<CR>
+
+" Always color brackets
+let g:rainbow_active = 1
 
 " Various prefs
 set encoding=utf-8
@@ -147,9 +166,6 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
-
-" SimplyFold setings
-let g:SimpylFold_docstring_preview = 1
 
 " Highlight line number
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
