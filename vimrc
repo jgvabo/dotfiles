@@ -15,19 +15,12 @@ call plug#begin('~/.vim/plugged')
 
 " Colorscheme
 Plug 'tomasr/molokai'
-Plug 'altercation/vim-colors-solarized'
-Plug 'mhartington/oceanic-next'
-Plug 'rakr/vim-one'
-Plug 'junegunn/seoul256.vim'
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 " Surrond words with ",', <tag> etc.
 Plug 'tpope/vim-surround'
 " Quickly comment out lines
 Plug 'tpope/vim-commentary'
-" Distraction free writing
-Plug 'junegunn/goyo.vim', {'on': 'Goyo'}
-Plug 'junegunn/limelight.vim', {'on': 'Goyo'}
 " Peek at buffers with @ and <ctrl>+r
 Plug 'junegunn/vim-peekaboo'
 " Statusline
@@ -44,28 +37,27 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Fuzzy file finder - <leader>+z
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Silver searcher
-Plug 'mileszs/ack.vim'
 " Git integration
 Plug 'tpope/vim-fugitive'
 " Highlight changes in the gutter
 Plug 'airblade/vim-gitgutter'
-" Schlumberger Eclipse syntax
-Plug 'Statoil/vim-e100'
 " For working with csv files
 Plug 'mechatroner/rainbow_csv'
 " Color brackets
 Plug 'frazrepo/vim-rainbow'
+" Distraction free writing
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Initialize plugin system
 call plug#end()
 
 " Set colorscheme
+set termguicolors
 set t_Co=256
 let g:rehash256 = 1
-
 set background=dark
-colorscheme molokai 
+colorscheme molokai
 
 " Fix for gitgutter
 highlight! link SignColumn LineNr
@@ -78,32 +70,24 @@ let g:airline_theme='molokai'
 let mapleader      = ' '
 let maplocalleader = ' '
 
-" Autotoggle Limelight with Goyo
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
 " Toggle line number display
 nnoremap <leader>l :set nonumber! norelativenumber!<cr>
 set nonumber! norelativenumber!
+
+" Goyo and limeight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+nnoremap <leader>y :Goyo<CR>
 
 
 " Toggle NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
 "
-" Toggle FZF
-nnoremap <leader>z :FZF<CR>
-
-" Ack / Silver searcher
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-cnoreabbrev Ack Ack!
-nnoremap <leader>w :Ack!<Space>
-
-
-" Toggle Goyo
-nnoremap <leader>y :Goyo<CR>
+" Find files with fzf
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>fe :Ag<CR>
+nnoremap <leader>fh :Helptags<CR>
 
 " Toggle Tagbar
 nmap <leader>b :TagbarToggle<CR>
@@ -145,11 +129,6 @@ augroup CloseLoclistWindowGroup
     autocmd!
     autocmd QuitPre * if empty(&buftype) | lclose | endif
 augroup END
-
-" Enable e100 highlighting
-au BufNewFile,BufRead *.DATA,*.SCH,*.INC,*.sch setf eclipse
-au BufNewFile,BufRead *.PRT,*.LOG		setf eclipse_prt
-au BufNewFile,BufRead *.tub,*.cnt,*.vol,*.ev setf schedule
 
 " FZF colors
 let g:fzf_colors =
